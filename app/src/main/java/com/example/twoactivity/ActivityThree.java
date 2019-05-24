@@ -10,10 +10,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class ActivityTwo extends AppCompatActivity  implements View.OnClickListener {
+public class ActivityThree extends AppCompatActivity  implements View.OnClickListener {
 
     Button btnActOne;
-    Button btnActThree;
+    Button btnActTwo;
     Button btnActFour;
     TextView tvView;
     final String TAG = "States";
@@ -21,12 +21,12 @@ public class ActivityTwo extends AppCompatActivity  implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_two);
+        setContentView(R.layout.activity_three);
 
+        btnActTwo = findViewById(R.id.btnActTwo);
+        btnActTwo.setOnClickListener(this);
         btnActOne = findViewById(R.id.btnActOne);
         btnActOne.setOnClickListener(this);
-        btnActThree = findViewById(R.id.btnActThree);
-        btnActThree.setOnClickListener(this);
         btnActFour = findViewById(R.id.btnActFour);
         btnActFour.setOnClickListener(this);
 
@@ -35,7 +35,7 @@ public class ActivityTwo extends AppCompatActivity  implements View.OnClickListe
         String name = intentName.getStringExtra("name");
         tvView.setText("Your name is: " + name);
 
-        Log.d(TAG, "SecondActivity: onCreate()");
+        Log.d(TAG, "ThirdActivity: onCreate()");
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -73,8 +73,8 @@ public class ActivityTwo extends AppCompatActivity  implements View.OnClickListe
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.btnActThree:
-                Intent intent2 = new Intent(this, ActivityThree.class);
+            case R.id.btnActTwo:
+                Intent intent2 = new Intent(this, ActivityTwo.class);
                 startActivity(intent2);
                 break;
             case R.id.btnActFour:
@@ -84,41 +84,5 @@ public class ActivityTwo extends AppCompatActivity  implements View.OnClickListe
             default:
                 break;
         }
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.d(TAG, "ActivityTwo: onRestart()");
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d(TAG, "ActivityTwo: onStart()");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d(TAG, "ActivityTwo: onResume()");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d(TAG, "ActivityTwo: onPause()");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d(TAG, "ActivityTwo: onStop()");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d(TAG, "ActivityTwo: onDestroy()");
     }
 }

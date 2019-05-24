@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TwoActivity</string>
+    <string name="go_to_2">Go to Activity Two</string>
+    <string name="first_activity">This is Activity One</string>
+    <string name="second_activity">This is Activity Two</string>
+    <string name="third_activity">This is Activity Three</string>
+    <string name="fourth_activity">This is Activity Four</string>
+    <string name="go_to_3">Go to Activity Three</string>
+    <string name="go_to_4">Go to Activity Four</string>
+    <string name="go_to_1">Go to Activity One</string>
 </resources>

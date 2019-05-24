@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/go_to_1"
+        android:id="@+id/actOne">
+    </item>
+    <item
+        android:title="@string/go_to_2"
+        android:id="@+id/actTwo">
+    </item>
+    <item
+        android:title="@string/go_to_3"
+        android:id="@+id/actThree">
+    </item>
+    <item
+        android:title="@string/go_to_4"
+        android:id="@+id/actFour">
+    </item>
+
+</menu>
